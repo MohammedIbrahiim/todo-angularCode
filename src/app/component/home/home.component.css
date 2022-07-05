@@ -1,0 +1,28 @@
+.item
+{
+    background-color: #041955;
+    /* height: 40px; */
+    color: white;
+    border-radius: 20px;
+}
+.item h3{
+  margin: 8px 15px ;
+}
+.input
+{
+    padding: 14px;
+    background-color: #183075;
+    border: none;
+    border-radius: 20px;
+}
+.input:focus
+{
+    background-color: #183075;
+}
+.bttn{
+  border-radius: 20px !important;
+}
+.done{
+  text-decoration: line-through;
+  background-color: #26345ca2;
+}

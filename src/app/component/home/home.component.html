@@ -1,0 +1,30 @@
+<div class="container mt-5 ">
+  <div class="row  d-flex justify-content-center">
+    <h1 class="text-light text-center">ToDo List App</h1>
+      <form class="my-5 d-flex  " action=""(ngSubmit)="add(todo)" [formGroup]="todo">
+        <div class="w-100">
+          <input class="form-control input text-light"  type="text" placeholder="Type Your Tasks Here ........" formControlName="todos">
+        </div>
+        <div>
+          <button *ngIf="!isEdit" class="btn bttn btn-primary  ms-5 mt-2 px-5">add</button>
+          <button *ngIf="isEdit" class="btn bttn btn-success ms-5 mt-2 px-5" (click)="update()">update</button>
+        </div>
+      </form>
+
+    <h2 class="text-light ms-5">Tasks</h2>
+    <div *ngFor="let item of tasks let i = index" class="mt-4 ms-5 row d-flex d-flex justify-content-center">
+
+      <div class="col-md-5  text-light item p-2" [ngClass]="{'done':item.iscompleted }" (click)="isDone(i)">
+        <h3 class="fs-6">{{item.todos}}</h3>
+      </div>
+
+      <div class=" col-md-4 p-2 ms-5">
+        <button class="btn btn-primary px-4 bttn" (click)="edit(i)">edit</button>
+        <button class="btn btn-danger mx-3 px-4 bttn" (click)="delete(i)">delete</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
